@@ -8,7 +8,11 @@ function App() {
   const[position,setposition]=useState(null)
 
 function positionHandler(e,d){
-setposition({x:d.x,y:d.y})  
+  console.log(d)
+  // if wwe are not happy, dont set the positiom
+  if(d.x>=10&&d.x<=210&&d.y>=10&&d.y<=110)
+  {setposition({x:d.x,y:d.y})}
+//setposition({x:d.x,y:d.y})  
 }
   return (
     <div className="App">
